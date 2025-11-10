@@ -89,6 +89,9 @@ Mobile App Dev - App Brainstorming
    - **Habit:** Used during social gatherings (parties, family events, game nights) or during short breaks for quick, casual matches against friends or random opponents.
    - **Scope:** V1: Core game loop with 3-5 starter categories (e.g., Pop Culture, History, Sports), local multiplayer mode (where everyone is in the same room), and a basic score tracker. V2: Remote multiplayer functionality (inviting friends online), expanded question database, and daily/weekly global leaderboards. V3: Introduction of custom user-generated quizzes and an editor tool. Implementation of different game modes (e.g., elimination mode, speed round).
 
+## Chosen Idea 
+**RoomEase - share bills, chores**
+  
 
 
 
