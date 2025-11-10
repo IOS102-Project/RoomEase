@@ -26,35 +26,34 @@ Mobile App Dev - App Brainstorming
 
 ## New App Ideas - List
 1. Social Network
-   - A platform for connecting with others online.
-3. Crypto Price tracking
-   - Monitors and provides real-time updates on cryptocurrency prices.
-4. Note taking App
-   - A tool for quickly recording, organizing, and managing thoughts and information.
-1. calorie or diet check App
-   - Tracks daily food intake, calories, and nutritional goals.
-1. professional Camera (on top of Apple Default camera)
-   - An advanced camera app providing manual controls and professional shooting features.
-1. Share family recipes
-   - A centralized digital cookbook for sharing and saving family recipes.
-4. An app to track student engagement and give encentives for teachers
-   - Measures student participation and provides incentives for teachers to encourage involvement.
-6. A social media app thats not TOXIC 🤮
-   - A social platform focused on positive interactions and healthy community building.
+    * A platform for connecting with others online.
+2. Crypto Price tracking
+    * Monitors and provides real-time updates on cryptocurrency prices.
+3. Note taking App
+    * A tool for quickly recording, organizing, and managing thoughts and information.
+4. calorie or diet check App
+    * Tracks daily food intake, calories, and nutritional goals.
+5. professional Camera (on top of Apple Default camera)
+    * An advanced camera app providing manual controls and professional shooting features.
+6. Share family recipes
+    * A centralized digital cookbook for sharing and saving family recipes.
+7. An app to track student engagement and give encentives for teachers
+    * Measures student participation and provides incentives for teachers to encourage involvement.
 8. A trivial battle/party quiz
-   - A competitive quiz game for group entertainment and knowledge testing.
-10. BlackJack game
-   - A digital version of the classic card game of blackjack.
-1. Great spots for pictures around me
-   - Locates and suggests local aesthetically pleasing places for photography.
-3. Homecare Reminder
-   - Schedules and reminds users of home maintenance and care tasks.
-5. My Fav Restaurants
-   - A personal directory for saving, rating, and managing preferred dining locations.
-7. Exploring New Recipes
-   - Suggests and organizes new culinary dishes and cooking instructions.
-1. RoomEase
-   - Share bills and chores.  A tool for roommates to easily divide and track shared expenses and household duties.
+    * A competitive quiz game for group entertainment and knowledge testing.
+9. BlackJack game
+    * A digital version of the classic card game of blackjack.
+10. Great spots for pictures around me
+    * Locates and suggests local aesthetically pleasing places for photography.
+11. Homecare Reminder
+    * Schedules and reminds users of home maintenance and care tasks.
+12. My Fav Restaurants
+    * A personal directory for saving, rating, and managing preferred dining locations.
+13. Exploring New Recipes
+    * Suggests and organizes new culinary dishes and cooking instructions.
+14. RoomEase
+    * Share bills and chores.  A tool for roommates to easily divide and track shared expenses and household duties.
+
 
 ## Top 3 New App Ideas
 1. Crypto Price Tracking 
@@ -62,23 +61,23 @@ Mobile App Dev - App Brainstorming
 3. A trivial battle/party quiz 
 
 ## New App Ideas - Evaluate and Categorize
-1. Student Behavior Tracker
-   - **Description**: Allows teachers, students and parents to stay up to date with student behavior in real time. Teachers can acknowledge positive student behavior when it happens, students can receive instant positive reinforcement and parents can be more tuned in to how their child is doing at school.
-   - **Category:** Social Networking
-   - **Mobile:** Mobile is essential for the instant logging of student behavior. Students use the app to purchase goods from the student store and other rewards. The camera is used to share images with parents.
-   - **Story:** Creates a team between student, parent and teacher. Allows good behavior to not go unnoticed and for students to get rewards and positive reinforcement from teachers, parents and peers
-   - **Market:** Any school district or individual classroom teacher of any grade could utilize this app. District wide licensing and custom features could be used for monetization. 
-   - **Habit:** Teachers are using this constantly throughout the school day. Students are using the app daily to check their performance and cash in on rewards.
-   - **Scope:** V1 would allow teachers to access a roster of students and input behavior logs. Could actually be tested by a real teacher with a class of students. V2 would incorporate a student facing version for students to see their performance. V3 would add a way for students to earn and obtain rewards for goals met. V4 would incorporate a parent facing version.
+1. Crypto Price Tracking
+   - **Description**: Real-time cryptocurrency tracking app that allows users to monitor market fluctuations, view portfolio's and performances, as well as setting alerts for price changes. Users can follow coins and see trends. 
+   - **Category**: Finance / Productivity
+   - **Mobile**: Mobile is essential for receiving instant notifications on price movements, viewing real-time charts, and tracking the market on the go.
+   - **Story**: “Stay ahead of the market, anytime, anywhere.” The app empowers crypto enthusiasts to make smarter decisions through timely insights and price alerts. Whether you’re holding long-term or trading daily, your portfolio stays at your fingertips.
+   - **Habit**: Daily use, especially during volatile market conditions. Frequent engagement through notifications, price alerts, and portfolio tracking.
+   - **Market**: Individual investors, crypto traders, and enthusiasts — from beginners wanting a simple tracker to experienced users needing accurate alerts. Potential partnerships with exchanges or DeFi platforms
+   - **Scope**: V1 Crypto tracking. V2 Portoflio performance tracking. V3 Crypto News, trends.
 
-1. Student Behavior Tracker
-   - **Description**: Allows teachers, students and parents to stay up to date with student behavior in real time. Teachers can acknowledge positive student behavior when it happens, students can receive instant positive reinforcement and parents can be more tuned in to how their child is doing at school.
-   - **Category:** Social Networking
-   - **Mobile:** Mobile is essential for the instant logging of student behavior. Students use the app to purchase goods from the student store and other rewards. The camera is used to share images with parents.
-   - **Story:** Creates a team between student, parent and teacher. Allows good behavior to not go unnoticed and for students to get rewards and positive reinforcement from teachers, parents and peers
-   - **Market:** Any school district or individual classroom teacher of any grade could utilize this app. District wide licensing and custom features could be used for monetization. 
-   - **Habit:** Teachers are using this constantly throughout the school day. Students are using the app daily to check their performance and cash in on rewards.
-   - **Scope:** V1 would allow teachers to access a roster of students and input behavior logs. Could actually be tested by a real teacher with a class of students. V2 would incorporate a student facing version for students to see their performance. V3 would add a way for students to earn and obtain rewards for goals met. V4 would incorporate a parent facing version.
+2. RoomEase
+   - **Description**: Shared living management app for roommates — splits bills, tracks chores, and manages shopping lists in one convinient place. Keep the communication transparent and responsibilities clear, while reducing conflicts over money and cleaning.
+   - **Category**: Productivity / Lifestyle
+   - **Mobile**: Mobile is essential for roomates to instantly log expenses and mark chores. While app will continue to remind roomates about any tasks and unpaid bills.
+   - **Story**: “Keep your home organized and your roommates happy.” The app is designed to turn shared living space from disaster to a pleasant experience with clear boarders and collaboration. We simplify communication, tasks and responsibilities. 
+   - **Habit**: Weekly use for majority of the users. During important events i.e Parties, birthdays, friends&family visitations the could be used daily in preparation. 
+   - **Market**: College students, young adults in shared housing
+   - **Scope**: V1 split bills and shared expenses. V2 Add and share chores. V3 Split the bills. V4. Reminders.
 
 1. A trivial battle/party quiz
    - **Description**: A fast-paced, multi-category trivia application designed for simultaneous multiplayer interaction at parties or remote social gatherings. It offers various competitive modes (e.g., elimination, quick fire) and leaderboards.
@@ -91,7 +90,3 @@ Mobile App Dev - App Brainstorming
 
 ## Chosen Idea 
 **RoomEase - share bills, chores**
-  
-
-
-
