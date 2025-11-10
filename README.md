@@ -1,7 +1,7 @@
-Original App Design Project - README Template
+Original App Design Project
 ===
 
-# APP_NAME_HERE
+# RoomEase
 
 ## Table of Contents
 
@@ -14,17 +14,16 @@ Original App Design Project - README Template
 
 ### Description
 
-[Provide a brief description of your app, its purpose, and functionality.]
+Shared living management app for roommates. Split bills, track chores, and manages shopping lists in one convinient place. Keep the communication transparent and responsibilities clear, while reducing conflicts over money and cleaning.
 
 ### App Evaluation
 
-[Evaluation of your app across the following attributes]
-- **Category:** [e.g., Social, Entertainment, Education]
-- **Mobile:** [Is it a mobile application only?]
-- **Story:**  [What story does your app tell?]
-- **Market:** [Target audience for the app]
-- **Habit:** [Is it a daily use app or occasional use?]
-- **Scope:** [Is it a broad or narrow app in terms of features?]
+- **Category:** Productivity / Lifestyle
+- **Mobile:** Mobile is essential for roomates to instantly log expenses and mark chores. While app will continue to remind roomates about any tasks and unpaid bills.
+- **Story:** “Keep your home organized and your roommates happy.” The app is designed to turn shared living space from disaster to a pleasant experience with clear boarders and collaboration. We simplify communication, tasks and responsibilities. 
+- **Market:** Weekly use for majority of the users. During important events i.e Parties, birthdays, friends&family visitations the could be used daily in preparation.
+- **Habit:** College students, young adults in shared housing
+- **Scope:** V1 split bills and shared expenses. V2 Add and share chores. V3 Split the bills. V4. Reminders.
 
 ## Product Spec
 
