@@ -1,36 +1,51 @@
-Mobile App Dev - App Brainstorming
-===
-
 ## Favorite Existing Apps - List
-1. Coinbase
-1. Waze 
-1. Ruler
+1. Instagram
+2. TikTok
+3. Uber
+4. Amazon
+5. ApplePay
 
 ## Favorite Existing Apps - Categorize and Evaluate
+### Instagram
+   - **Category:** Photo & Video / Social  
+   - **Mobile:** Website is view only, uses camera, mobile first experience.  
+   - **Story:** Allows users to share their lives in pictures and enhance their content with filters.  
+   - **Market:** Anyone that takes pictures could enjoy this app. Ability to follow and hashtag based on interests and categories allows users with unique interests to engage with relevant content.  
+   - **Habit:** Users can post throughout the day many times. Features like "Stories" encourage more candid posting as well. Users can explore endless pictures in any category imaginable whenever they want. Very habbit forming!  
+   - **Scope:** Instagram started out extremely narrow focused, just posting pics and viewing feeds. Has expanded to a somewhat larger scope including "Instagram Stories" (a la SnapChat) and messenger features.  
 
-### Coinbase
-* **Category:** Finance / Investing
-* **Mobile:** Essential. While accessible via desktop, the mobile app is crucial for on-the-go portfolio tracking, receiving real-time price alerts, and executing timely trades in the volatile crypto market.
-* **Story:** Simplifies entry into the cryptocurrency world, providing a secure and user-friendly platform for everyday individuals to buy, sell, hold, and learn about digital assets.
-* **Market:** Investors new to cryptocurrency, as well as more experienced traders looking for a convenient mobile interface.
-* **Habit:** Usage can be habitual, checking portfolio value daily. Activity spikes during periods of high market volatility.
-* **Scope:** Started as a simple Bitcoin brokerage. Scope has massively expanded to include trading numerous altcoins, an advanced trading platform.
+### TikTok
+   - **Category:** Social  
+   - **Mobile:** Mobile first experience, uses camera  
+   - **Story:** Lets users create and share short videos with music, filters, and effects. Its algorithm personalizes content based on interests, keeping engagement high.  
+   - **Market:** Geared toward all ages but especially popular with younger audiences who enjoy quick, creative video content. Brands and creators also use it for exposure.  
+   - **Habit:** Highly addictive due to endless scrolling, instant feedback, and short-form entertainment. Users often spend long periods watching or creating content daily.  
+   - **Scope:** Started as a short video app but now includes live streaming, shopping features, and creator monetization tools.  
 
-### Waze
-* **Category:** Navigation / Utilities / Social
-* **Mobile:** Exclusively mobile. It requires the device's live GPS, mobile data connection, and sensor input to function as a real-time navigation tool.
-* **Story:** Real-time data from other drivers to find the optimal route, warning users about police, accidents, hazards, and speed traps ahead.
-* **Market:** Drivers in urban or high-traffic areas, who want to minimize travel time and avoid delays.
-* **Habit:** Primarily situational use. Users open the app before starting a drive, especially for commutes or navigating to unfamiliar locations. It runs in the foreground or background for the duration of the trip.
-* **Scope:** Core functionality is turn-by-turn GPS navigation with real-time, user-reported traffic data. Scope has expanded to include udio app integration, planned drives, and gas station price information.
+### Uber
+   - **Category:** Transportation / Travel  
+   - **Mobile:** Built for mobile-first experience using GPS, location services, and real-time tracking. The website has limited functionality.  
+   - **Story:** Connects riders with nearby drivers for convenient, cashless transportation. Expanded to include Uber Eats, delivering food from local restaurants.  
+   - **Market:** Serves anyone needing quick, affordable rides or delivery—commuters, travelers, and businesses alike.  
+   - **Habit:** Users often rely on the app daily or weekly for commuting, errands, or dining. The convenience encourages repeat use.  
+   - **Scope:** Began strictly as a ride-hailing service but has expanded to food delivery, freight, and autonomous vehicle research.  
 
-### Ruler
-* **Category:** Utilities
-* **Mobile:** Exclusively mobile. It requires the device's camera and motion sensors to function, using Augmented Reality (AR) to overlay measurements onto the real world.
-* **Story:** Offers the convenience of a basic measuring tool directly on your iPhone or iPad, useful for quick estimations when a physical tape measure isn't handy.
-* **Market:** Anyone needing occasional, approximate measurements of real-world objects (furniture dimensions, picture spacing, etc.). Not designed for tasks requiring high precision.
-* **Habit:** Situational use. Users open the app only when they have a specific, immediate need to measure something. Not typically used daily or habitually.
-* **Scope:** Initially offered basic point-to-point AR measurement. Scope expanded in subsequent iOS updates to include automatic measurement of rectangular objects, measuring a person's height (on devices with LiDAR), saving measurements with photos, and incorporating a digital spirit level function.
+### Amazon
+   - **Category:** Shopping / E-Commerce  
+   - **Mobile:** Fully functional on mobile with one-click purchasing, voice search, and delivery tracking. Optimized for convenience on the go.  
+   - **Story:** Started as an online bookstore and evolved into the world’s largest marketplace, offering nearly every product imaginable.  
+   - **Market:** Broad audience from casual shoppers to businesses, appealing to anyone looking for fast, reliable online shopping.  
+   - **Habit:** Very habit-forming due to easy purchasing, quick delivery, and personalized recommendations that encourage repeat buys.  
+   - **Scope:** Expanded far beyond retail into streaming, cloud services, grocery delivery, and smart home devices.  
+
+### ApplePay
+   - **Category:** Finance / Payments  
+   - **Mobile:** Mobile-first digital wallet integrated into iOS devices using Face ID, Touch ID, and NFC for contactless payments.  
+   - **Story:** Created to simplify and secure payments using iPhone or Apple Watch, reducing the need to carry physical cards or cash.  
+   - **Market:** Targets iPhone users, merchants, and banks wanting secure and fast transactions within Apple’s ecosystem.  
+   - **Habit:** Becomes a daily habit for users who make quick purchases in stores, apps, or online. The convenience builds long-term loyalty.  
+   - **Scope:** Initially launched as a contactless payment system, now expanded into Apple Cash, peer-to-peer payments, and financial partnerships like Apple Card.  
+    
 
 
 ## New App Ideas - List
