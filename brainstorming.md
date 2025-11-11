@@ -61,7 +61,7 @@ Mobile App Dev - App Brainstorming
 13. Exploring New Recipes
     * Suggests and organizes new culinary dishes and cooking instructions.
 14. RoomEase
-    * Share bills and chores.  A tool for roommates to easily divide and track shared expenses and household duties.
+    * Share bills and chores. A tool for roommates to easily divide and track shared expenses and household duties.
 
 
 ## Top 3 New App Ideas
