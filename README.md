@@ -57,6 +57,13 @@ Shared living management app for roommates. Split bills, track chores, and manag
 * User can view a history of completed chores and by whom.
 * User can view a calendar of chore assignments.
 * User can comment on a bill or chore.
+* User can view a list of shared upcoming and past events.
+* User can add a new event with a title, description, date, and time.
+* User can see the details of a specific event.
+* User can set up recurring events (e.g., weekly "Game Night").
+* User can receive a push notification reminder before an event starts.
+* User can RSVP to an event (e.g., Going, Not Going).
+* User can see who is attending an event.
 
 ### 2. Screen Archetypes
 
@@ -111,6 +118,21 @@ Shared living management app for roommates. Split bills, track chores, and manag
     * User can add a new item to the list.
     * User can mark an item as purchased.
 
+-   [ ] **(Optional) Events List Screen**
+    * User can see a list of upcoming shared events (e.g., Party, Game Night).
+    * User can see the date and time for each event.
+    * User can tap "Add" to go to the Add Event Screen.
+    * User can tap an event to see its details.
+
+-   [ ] **(Optional) Event Details Screen**
+    * User can view the event title, description, date, and time.
+    * (Optional: User can see who has RSVP'd).
+
+-   [ ] **(Optional) Add Event Screen**
+    * User can enter an event title and description.
+    * User can select a date and time for the event.
+    * User can tap **Save** to add the event to the group.
+
 ### 3. Navigation
 
 **Tab Navigation** (Tab to Screen)
@@ -122,22 +144,27 @@ Shared living management app for roommates. Split bills, track chores, and manag
 
 **Flow Navigation** (Screen to Screen)
 
-
-
 -   [ ] **Bills List Screen**
-    * Leads to [Bill Details Screen] (when tapping an existing bill)
-    * Leads to [Add Bill Screen] (when tapping "Add" button)
+    * Leads to Bill Details Screen (when tapping an existing bill)
+    * Leads to Add Bill Screen (when tapping "Add" button)
 -   [ ] **Bill Details Screen**
-    * Leads to [Bills List Screen] (on back navigation)
+    * Leads to Bills List Screen (on back navigation)
 -   [ ] **Add Bill Screen**
-    * Leads to [Bills List Screen] (after successful post)
+    * Leads to Bills List Screen (after successful post)
 -   [ ] **Chores List Screen**
-    * Leads to [Add Chore Screen] (when tapping "Add" button)
-    * Leads to [Chore Calendar Screen] (when tapping calendar icon/button)
+    * Leads to Add Chore Screen (when tapping "Add" button)
+    * Leads to Chore Calendar Screen (when tapping calendar icon/button)
 -   [ ] **Add Chore Screen**
-    * Leads to [Chores List Screen] (after successful post)
+    * Leads to Chores List Screen (after successful post)
 -   [ ] **Shopping List Screen**
-    * (Primary actions are on-screen, no major flow out)
+    * Leads to Purchased Items
+-   [ ] **(Optional) Events List Screen**
+    * Leads to Event Details Screen (when tapping an existing event)
+    * Leads to Add Event Screen (when tapping "Add" button)
+-   [ ] **(Optional) Add Event Screen**
+    * Leads to Events List Screen (after successful save)
+-   [ ] **(Optional) Event Details Screen**
+    * Leads to Events List Screen (on back navigation)
 
 
 ## Wireframes
