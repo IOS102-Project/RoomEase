@@ -76,3 +76,4 @@ fabric.properties
 dist/
 tmp/
 *.log
+RoomEase/GoogleService-Info.plist
