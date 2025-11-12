@@ -169,30 +169,66 @@ Shared living management app for roommates. Split bills, track chores, and manag
 
 ## Wireframes
 
-[Add picture of your hand sketched wireframes in this section]
+<img src="wireframes/overview.png" width=600>
+<img src="wireframes/general_overview.png" width=600>
+<img src="wireframes/bills.png" width=600>
+<img src="wireframes/chores.png" width=600>
+<img src="wireframes/shoppinglist.png" width=600>
 
-### [BONUS] Digital Wireframes & Mockups
-
-### [BONUS] Interactive Prototype
 
 ## Schema 
 
-
 ### Models
 
-[Model Name, e.g., User]
-| Property | Type   | Description                                  |
-|----------|--------|----------------------------------------------|
-| username | String | unique id for the user post (default field)   |
-| password | String | user's password for login authentication      |
-| ...      | ...    | ...                          
+#### User
+
+| Property | Type | Description |
+|---|---|---|
+| username | String | Unique identifier for the user (default Parse field). |
+| password | String | User's password for login authentication (default Parse field). |
+| email | String | User's email address. |
+
+#### Home (Optional)
+
+| Property | Type | Description |
+|---|---|---|
+| name | String | Name of the shared home (e.g., "The Apartment," "21B"). |
+| inviteCode | String | Unique code for roommates to join this home. |
+| users | Array of Pointers to User | List of users belonging to this home. |
+
+#### Bill
+
+| Property | Type | Description |
+|---|---|---|
+| name | String | Name of the bill. |
+| totalAmount | Number | Total amount of the bill. |
+| dueDate | Date | When the bill is due. |
+| isPaid | Boolean | Overall status of the bill (true if all shares are paid). |
+| creator | Pointer to User | The user who created this bill. |
+| home | Pointer to Home | The home this bill belongs to. |
+| shares | Array of Objects | Each object contains { userPointer: Pointer to User, amount: Number, isPaid: Boolean }. |
+| notes | String | Optional notes for the bill. |
+
+#### Chore
+
+| Property | Type | Description |
+|---|---|---|
+| name | String | Name of the chore. |
+| assignedTo | Pointer to User | The user currently assigned to the chore (can be null for unassigned). |
+| dueDate | Date | When the chore is due. |
+| isCompleted | Boolean | True if the chore has been marked as completed. |
+| recurrencePattern | String | e.g., "daily," "weekly," "monthly," "Mon, Wed, Fri". |
+| home | Pointer to Home | The home this chore belongs to. |
+| creator | Pointer to User | The user who created this chore. |
+
+#### ShoppingListItem
+
+| Property | Type | Description |
+|---|---|---|
+| name | String | Name of the item (e.g., "Milk," "Paper Towels"). |
+| isPurchased | Boolean | True if the item has been purchased. |
+| addedBy | Pointer to User | The user who added the item to the list. |
+| home | Pointer to Home | The home this item belongs to. |        
 
 
 ### Networking
-
-- [List of network requests by screen]
-- [Example: `[GET] /users` - to retrieve user data]
-- ...
-- [Add list of network requests by screen ]
-- [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
