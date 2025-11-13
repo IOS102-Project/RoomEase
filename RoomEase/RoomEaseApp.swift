@@ -6,16 +6,17 @@
 //
 
 import SwiftUI
-import FirebaseCore
+//import FirebaseCore
 
-@main
-struct RoomEaseApp: App {
-    init() {
-        FirebaseApp.configure()
-    }
-    var body: some Scene {
-        WindowGroup {
-            LoginView()
-        }
-    }
-}
+//@main
+//struct RoomEaseApp: App {
+//    init() {
+//        FirebaseApp.configure()
+//    }
+//    var body: some Scene {
+//        WindowGroup {
+//            LoginView()
+//        }
+//    }
+//}
+
