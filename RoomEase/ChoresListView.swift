@@ -11,12 +11,17 @@ import SwiftUI
 struct ChoresListView: View {
     @State private var chores: [Chore] = []
     @State private var showingAddChore = false
-    
+    @State private var selectedChore: Chore?
+
     var body: some View {
         NavigationStack {
             List {
                 ForEach(chores) { chore in
-                    ChoreRowView(chore: chore)
+                    Button {
+                        selectedChore = chore
+                    } label:{
+                        ChoreRowView(chore: chore)
+                    }
                 }
             }
             .listStyle(.plain)
@@ -33,6 +38,13 @@ struct ChoresListView: View {
             .onAppear {
                 loadChores()
             }
+            .sheet(isPresented: $showingAddChore){
+                AddChoreView { newChore in chores.append(newChore)
+                }
+            }
+            .navigationDestination(item: $selectedChore){chore in ChoreDetailView(chore: chore)
+            }
+        
         }
     }
     
