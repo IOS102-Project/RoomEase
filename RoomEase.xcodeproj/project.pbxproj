@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		81F5DA892EC91EE2000A19F1 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 81F5DA882EC91EE2000A19F1 /* FirebaseAuth */; };
+		81F5DA8B2EC91EE2000A19F1 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 81F5DA8A2EC91EE2000A19F1 /* FirebaseFirestore */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		818826392EBC422B00F86C46 /* RoomEase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoomEase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,6 +28,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81F5DA892EC91EE2000A19F1 /* FirebaseAuth in Frameworks */,
+				81F5DA8B2EC91EE2000A19F1 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +72,8 @@
 			);
 			name = RoomEase;
 			packageProductDependencies = (
+				81F5DA882EC91EE2000A19F1 /* FirebaseAuth */,
+				81F5DA8A2EC91EE2000A19F1 /* FirebaseFirestore */,
 			);
 			productName = RoomEase;
 			productReference = 818826392EBC422B00F86C46 /* RoomEase.app */;
@@ -94,6 +103,9 @@
 			);
 			mainGroup = 818826302EBC422B00F86C46;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				81F5DA872EC91EE2000A19F1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 8188263A2EBC422B00F86C46 /* Products */;
 			projectDirPath = "";
@@ -332,6 +344,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		81F5DA872EC91EE2000A19F1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		81F5DA882EC91EE2000A19F1 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 81F5DA872EC91EE2000A19F1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		81F5DA8A2EC91EE2000A19F1 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 81F5DA872EC91EE2000A19F1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 818826312EBC422B00F86C46 /* Project object */;
 }
