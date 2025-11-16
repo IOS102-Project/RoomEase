@@ -5,123 +5,82 @@
 //  Created by june taylr on 11/11/25.
 //
 
+
 import SwiftUI
-import FirebaseAuth
-import FirebaseFirestore
 
 struct SignupView: View {
-    @Environment(\.dismiss) var dismiss
     @State private var username = ""
     @State private var email = ""
     @State private var password = ""
-    @State private var signupError = ""
-    @State private var isLoading = false
+    @State private var navigateToLogin = false
 
     var body: some View {
-        ZStack {
-            LinearGradient(
-                gradient: Gradient(colors: [
+        NavigationStack {
+            ZStack {
+                LinearGradient(colors: [
                     Color(red: 0.65, green: 0.85, blue: 1.0),
                     Color(red: 0.40, green: 0.70, blue: 1.0)
-                ]),
-                startPoint: .topLeading,
-                endPoint: .bottomTrailing
-            )
-            .ignoresSafeArea()
+                ], startPoint: .topLeading, endPoint: .bottomTrailing)
+                .ignoresSafeArea()
 
-            VStack(spacing: 24) {
-                Text("Create Account")
-                    .font(.title)
-                    .fontWeight(.bold)
-                    .foregroundColor(.black)
-
-                VStack(spacing: 16) {
-                    TextField("Username", text: $username)
-                        .padding()
-                        .background(Color.white)
-                        .cornerRadius(10)
+                VStack(spacing: 24) {
+                    Text("Create Account")
+                        .font(.title)
+                        .fontWeight(.bold)
                         .foregroundColor(.black)
-                        .multilineTextAlignment(.center)
-                        .textInputAutocapitalization(.never)
 
-                    TextField("Email", text: $email)
-                        .padding()
-                        .background(Color.white)
-                        .cornerRadius(10)
-                        .foregroundColor(.black)
-                        .multilineTextAlignment(.center)
-                        .textInputAutocapitalization(.never)
-
-                    SecureField("Password", text: $password)
-                        .padding()
-                        .background(Color.white)
-                        .cornerRadius(10)
-                        .foregroundColor(.black)
-                        .multilineTextAlignment(.center)
-
-                    if !signupError.isEmpty {
-                        Text(signupError)
-                            .foregroundColor(.red)
-                            .font(.subheadline)
+                    VStack(spacing: 14) {
+                        field("Username", text: $username)
+                        field("Email", text: $email)
+                        secureField("Password", text: $password)
                     }
+                    .padding(30)
+                    .background(Color.white.opacity(0.9))
+                    .cornerRadius(20)
+                    .shadow(radius: 10)
+                    .frame(maxWidth: 340)
 
-                    Button(action: registerUser) {
-                        if isLoading {
-                            ProgressView().tint(.white)
-                        } else {
-                            Text("Sign Up")
-                                .frame(maxWidth: .infinity)
-                                .padding()
-                                .background(Color.blue)
-                                .cornerRadius(10)
-                                .foregroundColor(.white)
-                                .fontWeight(.semibold)
-                        }
+                    Button("Sign Up") {
+                        navigateToLogin = true
                     }
-                    .disabled(isLoading)
-                }
-                .padding(30)
-                .background(Color.white.opacity(0.9))
-                .cornerRadius(20)
-                .shadow(radius: 10)
-                .frame(maxWidth: 340)
+                    .frame(maxWidth: .infinity)
+                    .padding()
+                    .background(Color.blue)
+                    .cornerRadius(10)
+                    .foregroundColor(.white)
+                    .fontWeight(.semibold)
+                    .padding(.horizontal, 40)
 
-                Button("Already have an account? Log In →") {
-                    dismiss()
+                    Button("Already have an account? Log In →") {
+                        navigateToLogin = true
+                    }
+                    .foregroundColor(.white)
+                    .fontWeight(.semibold)
                 }
-                .foregroundColor(.white)
-                .fontWeight(.semibold)
+                .padding()
             }
-            .padding()
+            .navigationDestination(isPresented: $navigateToLogin) {
+                LoginView()
+            }
         }
     }
 
-    private func registerUser() {
-        guard !username.isEmpty, !email.isEmpty, !password.isEmpty else {
-            signupError = "Please fill in all fields."
-            return
-        }
+    private func field(_ placeholder: String, text: Binding<String>) -> some View {
+        TextField(placeholder, text: text)
+            .padding()
+            .background(Color.white)
+            .cornerRadius(10)
+            .foregroundColor(.black)
+            .multilineTextAlignment(.center)
+            .textInputAutocapitalization(.never)
+    }
 
-        isLoading = true
-        Auth.auth().createUser(withEmail: email, password: password) { result, error in
-            if let error = error {
-                signupError = error.localizedDescription
-                isLoading = false
-            } else if let uid = result?.user.uid {
-                let db = Firestore.firestore()
-                db.collection("users").document(uid).setData([
-                    "username": username.lowercased(),
-                    "email": email
-                ]) { err in
-                    isLoading = false
-                    if let err = err {
-                        signupError = err.localizedDescription
-                    } else {
-                        signupError = ""
-                        dismiss() // Return to LoginView
-                    }
-                }
-            }
-        }
+    private func secureField(_ placeholder: String, text: Binding<String>) -> some View {
+        SecureField(placeholder, text: text)
+            .padding()
+            .background(Color.white)
+            .cornerRadius(10)
+            .foregroundColor(.black)
+            .multilineTextAlignment(.center)
     }
 }

@@ -7,26 +7,20 @@
 
 import SwiftUI
 import FirebaseAuth
-import FirebaseFirestore
 
 struct LoginView: View {
     @State private var username = ""
     @State private var password = ""
     @State private var loginError = ""
-    @State private var isLoading = false
     @State private var navigateToHome = false
 
     var body: some View {
         NavigationStack {
             ZStack {
-                LinearGradient(
-                    gradient: Gradient(colors: [
-                        Color(red: 0.65, green: 0.85, blue: 1.0),
-                        Color(red: 0.40, green: 0.70, blue: 1.0)
-                    ]),
-                    startPoint: .topLeading,
-                    endPoint: .bottomTrailing
-                )
+                LinearGradient(colors: [
+                    Color(red: 0.65, green: 0.85, blue: 1.0),
+                    Color(red: 0.40, green: 0.70, blue: 1.0)
+                ], startPoint: .topLeading, endPoint: .bottomTrailing)
                 .ignoresSafeArea()
 
                 VStack(spacing: 24) {
@@ -35,42 +29,15 @@ struct LoginView: View {
                         .fontWeight(.bold)
                         .foregroundColor(.black)
 
-                    VStack(spacing: 16) {
-                        TextField("Username", text: $username)
-                            .padding()
-                            .background(Color.white)
-                            .cornerRadius(10)
-                            .foregroundColor(.black)
-                            .textInputAutocapitalization(.never)
-                            .multilineTextAlignment(.center)
-
-                        SecureField("Password", text: $password)
-                            .padding()
-                            .background(Color.white)
-                            .cornerRadius(10)
-                            .foregroundColor(.black)
-                            .multilineTextAlignment(.center)
+                    VStack(spacing: 14) {
+                        field("Username", text: $username)
+                        secureField("Password", text: $password)
 
                         if !loginError.isEmpty {
                             Text(loginError)
                                 .foregroundColor(.red)
                                 .font(.subheadline)
                         }
-
-                        Button(action: loginUser) {
-                            if isLoading {
-                                ProgressView().tint(.white)
-                            } else {
-                                Text("Login")
-                                    .frame(maxWidth: .infinity)
-                                    .padding()
-                                    .background(Color.blue)
-                                    .cornerRadius(10)
-                                    .foregroundColor(.white)
-                                    .fontWeight(.semibold)
-                            }
-                        }
-                        .disabled(isLoading)
                     }
                     .padding(30)
                     .background(Color.white.opacity(0.9))
@@ -78,7 +45,23 @@ struct LoginView: View {
                     .shadow(radius: 10)
                     .frame(maxWidth: 340)
 
-                    NavigationLink("Don't have an account? Sign Up →", destination: SignupView())
+                    Button("Login") {
+                        // You can connect Firebase here later if you want real auth
+                        if username.isEmpty || password.isEmpty {
+                            loginError = "Enter username and password."
+                        } else {
+                            navigateToHome = true
+                        }
+                    }
+                    .frame(maxWidth: .infinity)
+                    .padding()
+                    .background(Color.blue)
+                    .cornerRadius(10)
+                    .foregroundColor(.white)
+                    .fontWeight(.semibold)
+                    .padding(.horizontal, 40)
+
+                    NavigationLink("Don’t have an account? Sign Up →", destination: SignupView())
                         .foregroundColor(.white)
                         .fontWeight(.semibold)
                 }
@@ -90,39 +73,22 @@ struct LoginView: View {
         }
     }
 
-    private func loginUser() {
-        guard !username.isEmpty, !password.isEmpty else {
-            loginError = "Please enter username and password."
-            return
-        }
+    private func field(_ placeholder: String, text: Binding<String>) -> some View {
+        TextField(placeholder, text: text)
+            .padding()
+            .background(Color.white)
+            .cornerRadius(10)
+            .foregroundColor(.black)
+            .multilineTextAlignment(.center)
+            .textInputAutocapitalization(.never)
+    }
 
-        isLoading = true
-        let db = Firestore.firestore()
-        db.collection("users")
-            .whereField("username", isEqualTo: username.lowercased())
-            .getDocuments { snapshot, error in
-                if let error = error {
-                    loginError = error.localizedDescription
-                    isLoading = false
-                    return
-                }
-
-                guard let document = snapshot?.documents.first,
-                      let email = document["email"] as? String else {
-                    loginError = "Username not found."
-                    isLoading = false
-                    return
-                }
-
-                Auth.auth().signIn(withEmail: email, password: password) { result, error in
-                    isLoading = false
-                    if let error = error {
-                        loginError = error.localizedDescription
-                    } else {
-                        loginError = ""
-                        navigateToHome = true
-                    }
-                }
-            }
+    private func secureField(_ placeholder: String, text: Binding<String>) -> some View {
+        SecureField(placeholder, text: text)
+            .padding()
+            .background(Color.white)
+            .cornerRadius(10)
+            .foregroundColor(.black)
+            .multilineTextAlignment(.center)
     }
 }
