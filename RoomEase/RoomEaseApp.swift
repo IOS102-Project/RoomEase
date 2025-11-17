@@ -6,8 +6,6 @@
 //
 
 import SwiftUI
-import FirebaseCore
-
 
 @main
 struct RoomEaseApp: App {
