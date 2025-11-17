@@ -8,79 +8,87 @@
 import SwiftUI
 import FirebaseAuth
 
-
 struct LoginView: View {
-    @State private var email = ""
+    @State private var username = ""
     @State private var password = ""
     @State private var loginError = ""
-    @State private var isLoading = false
-    @State private var isLoggedIn = false
+    @State private var navigateToHome = false
 
     var body: some View {
-        NavigationView {
-            VStack(spacing: 20) {
-                Text("RoomEase Login")
-                    .font(.largeTitle)
-                    .fontWeight(.semibold)
-                    .padding(.bottom, 40)
+        NavigationStack {
+            ZStack {
+                LinearGradient(colors: [
+                    Color(red: 0.65, green: 0.85, blue: 1.0),
+                    Color(red: 0.40, green: 0.70, blue: 1.0)
+                ], startPoint: .topLeading, endPoint: .bottomTrailing)
+                .ignoresSafeArea()
 
-                TextField("Email", text: $email)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .keyboardType(.emailAddress)
-                    .autocapitalization(.none)
+                VStack(spacing: 24) {
+                    Text("RoomEase Login")
+                        .font(.title)
+                        .fontWeight(.bold)
+                        .foregroundColor(.black)
 
-                SecureField("Password", text: $password)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    VStack(spacing: 14) {
+                        field("Username", text: $username)
+                        secureField("Password", text: $password)
 
-                if !loginError.isEmpty {
-                    Text(loginError)
-                        .foregroundColor(.red)
-                        .font(.subheadline)
-                }
-
-                Button(action: loginUser) {
-                    if isLoading {
-                        ProgressView()
-                    } else {
-                        Text("Login")
-                            .frame(maxWidth: .infinity)
-                            .padding()
-                            .background(Color.blue)
-                            .foregroundColor(.white)
-                            .cornerRadius(8)
+                        if !loginError.isEmpty {
+                            Text(loginError)
+                                .foregroundColor(.red)
+                                .font(.subheadline)
+                        }
                     }
-                }
-                .disabled(isLoading)
+                    .padding(30)
+                    .background(Color.white.opacity(0.9))
+                    .cornerRadius(20)
+                    .shadow(radius: 10)
+                    .frame(maxWidth: 340)
 
-                NavigationLink(destination: SignupView()) {
-                    Text("Don’t have an account? Sign up")
-                        .foregroundColor(.blue)
-                        .padding(.top, 10)
-                }
+                    Button("Login") {
+                        // You can connect Firebase here later if you want real auth
+                        if username.isEmpty || password.isEmpty {
+                            loginError = "Enter username and password."
+                        } else {
+                            navigateToHome = true
+                        }
+                    }
+                    .frame(maxWidth: .infinity)
+                    .padding()
+                    .background(Color.blue)
+                    .cornerRadius(10)
+                    .foregroundColor(.white)
+                    .fontWeight(.semibold)
+                    .padding(.horizontal, 40)
 
-                Spacer()
+                    NavigationLink("Don’t have an account? Sign Up →", destination: SignupView())
+                        .foregroundColor(.white)
+                        .fontWeight(.semibold)
+                }
+                .padding()
             }
-            .padding()
-            .navigationBarHidden(true)
+            .navigationDestination(isPresented: $navigateToHome) {
+                ContentView()
+            }
         }
     }
 
-    private func loginUser() {
-        guard !email.isEmpty, !password.isEmpty else {
-            loginError = "Please enter email and password."
-            return
-        }
+    private func field(_ placeholder: String, text: Binding<String>) -> some View {
+        TextField(placeholder, text: text)
+            .padding()
+            .background(Color.white)
+            .cornerRadius(10)
+            .foregroundColor(.black)
+            .multilineTextAlignment(.center)
+            .textInputAutocapitalization(.never)
+    }
 
-        isLoading = true
-        Auth.auth().signIn(withEmail: email, password: password) { result, error in
-            isLoading = false
-            if let error = error {
-                loginError = error.localizedDescription
-            } else {
-                isLoggedIn = true
-                loginError = ""
-                print("✅ Login successful for: \(result?.user.email ?? "")")
-            }
-        }
+    private func secureField(_ placeholder: String, text: Binding<String>) -> some View {
+        SecureField(placeholder, text: text)
+            .padding()
+            .background(Color.white)
+            .cornerRadius(10)
+            .foregroundColor(.black)
+            .multilineTextAlignment(.center)
     }
 }

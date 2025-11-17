@@ -3,6 +3,7 @@
 //  RoomEase
 //
 //  Main Shopping List Screen with Pending/Bought tabs
+//  Created by Carlos Sac on 11/15/25.
 //
 
 import SwiftUI
