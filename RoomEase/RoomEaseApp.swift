@@ -8,14 +8,27 @@
 import SwiftUI
 import FirebaseCore
 
+
 @main
 struct RoomEaseApp: App {
     init() {
         FirebaseApp.configure()
     }
+
+    @State private var showLaunch = true
+
     var body: some Scene {
         WindowGroup {
-            LoginView()
+            if showLaunch {
+                LaunchView()
+                    .onAppear {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                            showLaunch = false
+                        }
+                    }
+            } else {
+                LoginView()
+            }
         }
     }
 }
