@@ -9,6 +9,7 @@ Original App Design Project
 2. [Product Spec](#Product-Spec)
 3. [Wireframes](#Wireframes)
 4. [Schema](#Schema)
+5. [Builds](#Builds)
 
 ## Overview
 
@@ -230,5 +231,11 @@ Shared living management app for roommates. Split bills, track chores, and manag
 | addedBy | Pointer to User | The user who added the item to the list. |
 | home | Pointer to Home | The home this item belongs to. |        
 
+### Builds
+
+##### Previous Build
+
+<img src="demo/demov0_1.gif" width=400>
+<img src="demo/demov0_1_2.gif" width=400>
 
 ### Networking
