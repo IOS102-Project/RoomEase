@@ -68,19 +68,19 @@ Shared living management app for roommates. Split bills, track chores, and manag
 
 ### 2. Screen Archetypes
 
--   [ ] **Login Screen**
+-   [x] **Login Screen**
     * User can enter email and password to log in.
     * User can navigate to the Registration Screen.
     * (Optional: User can reset their password).
 
--   [ ] **Registration Screen**
+-   [x] **Registration Screen**
     * User can create a new account (e.g., name, email, password).
     * User can navigate back to the Login Screen.
 
 -   [ ] **(Optional) Create/Join Home Screen**
     * After registering, the user is prompted to create a new "Home" group or enter an invite code to join one.
 
--   [ ] **Dashboard Screen**
+-   [ ] **(Optional) Dashboard Screen**
     * User can see a summary of upcoming bills.
     * User can see a summary of "Today's" or "Upcoming" chores.
     * User can see a "who owes whom" balance summary.
@@ -100,21 +100,21 @@ Shared living management app for roommates. Split bills, track chores, and manag
     * User can select how to split the bill (e.g., equally, by amount).
     * User can tap **Post** to add the bill to the group.
 
--   [ ] **Chores List Screen**
+-   [x] **Chores List Screen**
     * User can see a list of shared chores (Trash, Dishes, Laundry, etc.).
     * User can see who is assigned to each chore and its due date/day.
     * User can mark a chore as complete.
     * User can tap "Add" to go to the Add Chore Screen.
 
--   [ ] **Chore Calendar Screen**
-    * User can view a calendar showing scheduled/assigned chores for each day.
+-   [x] **Chore List Screen**
+    * User can view a list showing scheduled/assigned chores for each day.
 
 -   [ ] **Add Chore Screen**
     * User can enter a chore name.
     * User can assign the chore to a roommate.
     * User can set a due date or make it a recurring chore.
 
--   [ ] **Shopping List Screen**
+-   [x] **Shopping List Screen**
     * User can see a list of shared items needed.
     * User can add a new item to the list.
     * User can mark an item as purchased.
@@ -152,12 +152,12 @@ Shared living management app for roommates. Split bills, track chores, and manag
     * Leads to Bills List Screen (on back navigation)
 -   [ ] **Add Bill Screen**
     * Leads to Bills List Screen (after successful post)
--   [ ] **Chores List Screen**
+-   [x] **Chores List Screen**
     * Leads to Add Chore Screen (when tapping "Add" button)
     * Leads to Chore Calendar Screen (when tapping calendar icon/button)
--   [ ] **Add Chore Screen**
+-   [x] **Add Chore Screen**
     * Leads to Chores List Screen (after successful post)
--   [ ] **Shopping List Screen**
+-   [x] **Shopping List Screen**
     * Leads to Purchased Items
 -   [ ] **(Optional) Events List Screen**
     * Leads to Event Details Screen (when tapping an existing event)
@@ -237,5 +237,6 @@ Shared living management app for roommates. Split bills, track chores, and manag
 
 <img src="demo/demov0_1.gif" width=400>
 <img src="demo/demov0_1_2.gif" width=400>
+<img src="demo/demov0_2.gif" width=400>
 
 ### Networking
