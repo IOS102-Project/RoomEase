@@ -18,7 +18,7 @@ struct ShoppingListView: View {
     }
     
     var body: some View {
-        
+        NavigationStack {
             VStack(spacing: 0) {
                 // Custom Tab Selector
                 HStack(spacing: 0) {
@@ -47,6 +47,7 @@ struct ShoppingListView: View {
                 }
             }
             .navigationTitle("Shopping List")
+            .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button(action: { showingAddItemSheet = true }) {
@@ -60,7 +61,7 @@ struct ShoppingListView: View {
                 AddItemSheet(viewModel: viewModel)
             }
         }
-    
+    }
 }
 
 // MARK: - Tab Button Component
