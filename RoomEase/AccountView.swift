@@ -7,10 +7,9 @@
 
 
 import SwiftUI
-import FirebaseAuth
 
 struct AccountView: View {
-    @Environment(\.dismiss) var dismiss
+    @EnvironmentObject var authViewModel: AuthViewModel
 
     var body: some View {
         VStack(spacing: 20) {
@@ -19,12 +18,7 @@ struct AccountView: View {
                 .fontWeight(.bold)
 
             Button("Logout") {
-                do {
-                    try Auth.auth().signOut()
-                    dismiss()
-                } catch {
-                    print("Error signing out: \(error.localizedDescription)")
-                }
+                authViewModel.signOut()
             }
             .padding()
             .background(Color.red)
