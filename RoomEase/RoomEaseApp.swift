@@ -10,11 +10,12 @@ import FirebaseCore
 
 @main
 struct RoomEaseApp: App {
+    @StateObject private var authViewModel = AuthViewModel()
+    @State private var showLaunch = true
+
     init() {
         FirebaseApp.configure()
     }
-
-    @State private var showLaunch = true
 
     var body: some Scene {
         WindowGroup {
@@ -26,7 +27,15 @@ struct RoomEaseApp: App {
                         }
                     }
             } else {
-                LoginView()
+                if authViewModel.isAuthenticated {
+                    ContentView()
+                        .environmentObject(authViewModel)
+                } else {
+                    NavigationStack {
+                        LoginView()
+                    }
+                    .environmentObject(authViewModel)
+                }
             }
         }
     }
